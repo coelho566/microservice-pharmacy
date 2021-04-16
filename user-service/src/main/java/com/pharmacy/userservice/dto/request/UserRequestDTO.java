@@ -1,4 +1,4 @@
-package com.pharmacy.userservice.dto;
+package com.pharmacy.userservice.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
@@ -27,7 +27,7 @@ public class UserRequestDTO {
     @JsonProperty(value = "celular")
     private String cell;
 
-    @JsonProperty(value = "endereço")
+    @JsonProperty(value = "endereco")
     private AddressRequestDTO address;
 
     @JsonProperty(value ="permicao")
