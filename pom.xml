@@ -25,6 +25,8 @@
     <modules>
         <module>gateway-server</module>
         <module>user-service</module>
+        <module>auth-service</module>
+        <module>core</module>
     </modules>
 
     <dependencies>

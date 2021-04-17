@@ -4,7 +4,6 @@ import com.pharmacy.userservice.dto.request.AddressRequestDTO;
 import com.pharmacy.userservice.dto.request.UserRequestDTO;
 import com.pharmacy.userservice.models.Address;
 import com.pharmacy.userservice.models.User;
-import com.pharmacy.userservice.models.UserBuilder;
 import com.pharmacy.userservice.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -25,15 +24,15 @@ public class UserService {
 
     public void saveUser(UserRequestDTO userRequest) {
 
-        User user = new UserBuilder()
-                .setCode(userRequest.getCode().toString())
-                .setName(userRequest.getName())
-                .setEmail(userRequest.getEmail())
-                .setPassword(encodePassword(userRequest.getPassword()))
-                .setBirthDate(userRequest.getBirthDate())
-                .setCell(userRequest.getCell())
-                .setAddress(getAddress(userRequest.getAddress()))
-                .setRoles(userRequest.getRoles())
+        User user = User.builder()
+                .code(userRequest.getCode().toString())
+                .name(userRequest.getName())
+                .email(userRequest.getEmail())
+                .password(encodePassword(userRequest.getPassword()))
+                .birthDate(userRequest.getBirthDate())
+                .cell(userRequest.getCell())
+                .address(getAddress(userRequest.getAddress()))
+                .roles(userRequest.getRoles())
                 .build();
 
         userRepository.save(user);

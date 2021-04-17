@@ -1,12 +1,16 @@
 package com.pharmacy.userservice.models;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Data
 @Embeddable
+@AllArgsConstructor
+@NoArgsConstructor
 public class Address {
 
     @Column(name = "rua")

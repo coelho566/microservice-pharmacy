@@ -1,6 +1,8 @@
 package com.pharmacy.userservice.models;
 
+import com.pharmacy.core.model.AbstractUser;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,6 +14,7 @@ import java.util.Date;
 @Table(name = "usuario")
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class User {
 
     @Id
